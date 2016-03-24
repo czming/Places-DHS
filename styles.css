@@ -1,0 +1,153 @@
+body {
+	background-image: url("/pictures/background_image.jpg");
+	background-size: 200px 200px;}
+
+#welcome-message {
+	width:95%;
+	padding:10px;
+	border:5px solid blue;
+	background-color:#ccffff;
+}	
+#logo {
+	width:100%;
+}
+
+#appname{
+	vertical-align:middle;
+}
+#appname a {
+	color:red;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;}
+#appname a:hover {
+	color:red;
+	text-decoration: underline;}
+	
+#schoollogo { 
+	width: 70px;
+	vertical-align:middle;
+}
+
+#userinfo {
+	float: right;
+	vertical-align: baseline;
+	text-align: right;
+	margin-top:50px;
+}
+	
+#navigationbar {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: black;}
+	
+.navigation a{
+	float: left;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 1% 10%;
+    text-decoration: none;
+	font-family: Arial Black, Gadget, sans-serif;
+}
+.navigation a:hover {
+    background-color: grey;
+}
+.navigation a:active {
+	background-color: red;
+	}
+	
+#login-button a{
+	float: right;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 1% 10%;
+    text-decoration: none;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+#login-button a:hover {
+    background-color: grey;
+}
+#login-button a:active {
+	background-color: red;
+	}
+	
+#place-summary{
+	text-align:center;
+	width:100%;}
+#place-summary td{ 
+	width: 50%;
+	padding-left: 70px;
+	padding-right: 70px;}
+
+.placelink a:visited{
+	color:blue;
+}
+.placelink a:hover{
+	color: black;
+}
+.placelink a:active {
+	color: red;
+}
+
+.place-description{
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.place-description td{
+	padding-left: 50px;
+	padding-right: 50px;
+	vertical-align: top;
+}
+
+#place-picture-description {
+	text-align:center;
+}
+
+#response {
+	margin-left:2%;
+}
+#response p{
+	font-family: Times New Roman;
+	color: black;
+}
+
+#content-submission {
+	margin-left:2%;
+}
+#content-submission p{
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: grey;
+}
+#content-submission option{
+	background-color: #C3BEBE;
+}
+
+#comment-box {
+	width:50%;
+	height:150px;
+}
+
+#comment-title{
+	text-decoration:underline;
+	margin-left:2%;
+}
+
+.comment {
+	margin-left:2%;
+	width:95%;
+	margin-bottom: 30px;
+}
+
+.help-image {
+	height: 200px;
+	width:400px;
+	border:1px solid black;
+}
+
+#help-text{
+	float:right;
+}

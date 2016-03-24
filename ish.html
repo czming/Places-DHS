@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset= "UTF-8">
+	<link rel= "stylesheet" type= "text/css" href= "/css/styles.css">
+	<title>Places@DHS </title>
+</head>
+<body>
+	<div id="welcome-box"> </div>
+	<table id= "logo">
+		<tr>
+			<td id= "schoollogo"><a href = "/"><img src = "/pictures/DHS_school_logo.png" height = "70" width = "70"/></td></a>
+			<td><h1 id = "appname"><a href = "/"> Places@DHS </a></h1></td>
+			<td><p id= "userinfo">{{userinfo}}</p></td>		
+		</tr>
+	</table>
+	<ul id= "navigationbar">
+		<li class= "navigation"><a href= "/"> Home </a></li>
+		<li class= "navigation"><a href= "submit"> Submit </a></li>
+		<li id= "login-button"> <a href= {{url}}> {{signinstatus}} </a> </li>
+	</ul>
+	<h2 style= "text-align:center; text-decoration:underline;"> Indoor Sports Hall (ISH) </h2>
+	<table class= "place-description">
+		<tr>
+			<td>
+				<!-- need to add the photo of indoor sports hall -->
+				<img src= "/pictures/ISH.PNG" width= "400" height= "300" />			
+			</td>
+			<td> 
+				<p>The Indoor Sports Hall (ISH) is a place where many sports CCAs, such as basketball and volleyball prepare for their competition. PE lessons are also held here, especially when it is raining</p>
+			</td>
+		</tr>
+	</table>
+	<br><br>
+	<h3 id="comment-title"> Stories people have shared </h3>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-74534629-1', 'auto');
+	ga('send', 'pageview');
+	function createCookie(){
+		document.cookie = "true; expires=Sat, 31 Dec 2050 12:00:00 UTC";
+	}
+	function checkCookie(){
+		var cookie = document.cookie;
+		if (cookie.length === 0){
+			document.getElementById("welcome-box").innerHTML = "<p id='welcome-message'> Hi, is this your first time here? You might want to look at our <a href='help'>help page</a> to familiarise yourself</p>";
+		}
+	}
+	checkCookie();
+	createCookie();
+	</script>

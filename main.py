@@ -105,6 +105,7 @@ class SubmitFront(webapp2.RequestHandler):
 							<option value="ZXY"> Zheng Xin Yuan </option>
 							<option value="Hall"> Hall </option>
 							<option value="PAC"> Performing Arts Centre (PAC) </option>
+							<option value="ISH"> Indoor Sports Hall (ISH) </option>
 						</select>
 						<p> What would you like to write about the place? </p>
 						<textarea id="comment-box" name="comment" placeholder="Enter your comment"></textarea>
@@ -248,6 +249,41 @@ class PAC(webapp2.RequestHandler):
 				self.response.out.write("""<div class="comment"><p><strong>%s </strong> wrote:</p>""" % i.author)
 			self.response.out.write("""<p>%s</p></div>""" % i.content)
 		self.response.out.write("""<br><br><br><p id="help-text"> Need some help? You can refer to our <a href="help">help page</a></p></div></body></html>""")
+
+class ISH(webapp2.RequestHandler):
+    def get(self):
+        # for button that changes depending on whether user is logged in
+		user = users.get_current_user()
+		template = JINJA_ENVIRONMENT.get_template('ish.html')
+		#queries for the comments from the key and fetches them
+		comment_query = Comment.query(ancestor=comment_key("ISH")).order(-Comment.datetime)
+		comments = comment_query.fetch(10)
+		if user:	
+			#shouldn't put in raw valus, should put them in a template_values dictionary and take from there
+			signinstatus = "Log out"
+			url = users.create_logout_url('/ish')
+			userinfo = "Logged in as {0}".format(user.email())
+		else:
+			signinstatus = "Log in"
+			url = users.create_login_url('/ish')
+			userinfo = ''
+		template_values = {
+			'signinstatus': signinstatus,
+			'url': url,
+			'userinfo': userinfo}
+		self.response.write(template.render(template_values))
+		self.response.write("""<div id='comment-area'>""")
+		#prints the comments below (a div is created for each comment)
+		for i in comments:
+			if user:
+				if user.email() == i.author:
+					self.response.out.write("""<div class="comment"><p><strong>%s (You)</strong> wrote:</p>""" % i.author)
+				else:
+					self.response.out.write("""<div class="comment"><p><strong>%s </strong> wrote:</p>""" % i.author)
+			else:
+				self.response.out.write("""<div class="comment"><p><strong>%s </strong> wrote:</p>""" % i.author)
+			self.response.out.write("""<p>%s</p></div>""" % i.content)
+		self.response.out.write("""<br><br><br><p id="help-text"> Need some help? You can refer to our <a href="help">help page</a></p></div></body></html>""")
 		
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
@@ -256,5 +292,6 @@ app = webapp2.WSGIApplication([
 	('/hall', Hall),
 	('/pac', PAC),
 	('/zxy', ZXY),
+	('/ish', ISH),
 	('/help', Help)
 ], debug=True)
