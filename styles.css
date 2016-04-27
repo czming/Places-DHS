@@ -1,6 +1,8 @@
 body {
 	background-image: url("/pictures/background_image.jpg");
-	background-size: 200px 200px;}
+	background-size: 200px 200px;
+	margin: 0;
+}
 
 #welcome-message {
 	width:95%;
@@ -34,13 +36,28 @@ body {
 	text-align: right;
 	margin-top:50px;
 }
+
+.index-img{
+	width: 25vw;
+	height: 18vw;
+	display:block;
+	border: 0.5vw solid #999999;
+	border-radius: 30px;
+	margin-bottom: 1vw;
+	margin-right: auto;
+	margin-left: auto;
+}
+.index-img:hover{
+	box-shadow: 0 0 15px black;
+}
 	
 #navigationbar {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
-	background-color: black;}
+	background-color: black;
+	border-radius: 15px;}
 	
 .navigation a{
 	float: left;
@@ -73,15 +90,42 @@ body {
 #login-button a:active {
 	background-color: red;
 	}
-	
-#place-summary{
-	text-align:center;
-	width:100%;}
-#place-summary td{ 
-	width: 50%;
-	padding-left: 70px;
-	padding-right: 70px;}
 
+.places-info{
+	display: inline-block;
+	width: 38vw;
+	padding-left: 5vw;
+	padding-top: 2vw;
+	padding-right: 5vw;
+	padding-bottom: 2vw;
+	vertical-align: top;
+}
+
+.placelink{
+	width: inherit;
+	text-align: justify;
+	font-weight: bold;
+	margin: 0 0 0 0;
+}
+.place-summary{
+	text-align: center;
+}
+@media screen and (max-width: 600px){
+	.places-info{
+		width: 90vw;
+	}
+	.index-img{
+		width: 75%;
+		height: 60%;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 3vw;
+		display:inline-block;
+		border: 5px solid #999999;
+		border-radius: 30px;
+	}
+}
+	
 .placelink a:visited{
 	color:blue;
 }
@@ -143,11 +187,66 @@ body {
 }
 
 .help-image {
-	height: 200px;
-	width:400px;
+	height: 25vw;
+	width: 50vw;
 	border:1px solid black;
 }
 
 #help-text{
 	float:right;
+}
+
+#place-pic {
+	display: inline-block;
+	margin-left: 10%;
+	margin-top: 5%vw;
+	width: 30%;
+	height: 40%vw;
+	margin-right: 10%;
+}
+#describe-place{
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+	padding-top: 5%vw;
+}
+@media screen and (max-width: 650px){
+	#describe-place{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	vertical-align: top;
+	padding-top: 5%vw;
+	text-align: center;
+	}
+	#place-pic {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10%vw;
+	width: 80%;
+	height: 90%vw;
+	}
+	#comment-box{
+	width: 90vw;
+	height: 50vw;
+	}
+}
+@media screen and (max-width: 460px){
+	.navigation a{
+		width: 50%;
+		padding: 1vw 0;
+	}
+	#login-button a{
+		width: 50%;
+		margin-right: 25%;
+		margin-left: 25%;
+		padding: 1%;
+	}
+	.help-image{
+		width: 80vw;
+		height: 40vw;
+	}
+}
+#help-box{
+	margin-left: 2vw;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset= "UTF-8">
 	<link rel= "stylesheet" type= "text/css" href= "/css/styles.css">
 	<title>Places@DHS </title>
@@ -19,18 +20,9 @@
 		<li class= "navigation"><a href= "submit"> Submit </a></li>
 		<li id= "login-button"> <a href= {{url}}> {{signinstatus}} </a> </li>
 	</ul>
-	<h2 style= "text-align:center; text-decoration:underline;"> Zheng Xin Yuan </h2>
-	<table class= "place-description">
-		<tr>
-			<td>
-				<img onmouseover='this.src="/pictures/zxy.jpg"' onmouseout='this.src="/pictures/zxy1.jpg"' src= "/pictures/zxy1.jpg" width= "400" height= "300" />
-				<p id="place-picture-description">(Mouse over to see another view)</p>
-			</td>
-			<td> 
-				<p>Zheng Xin Yuan is a place frequented by students who have exams the next day. The scenic background also makes it a common place for photo-taking among Dunmanians</p>
-			</td>
-		</tr>
-	</table>
+	<h2 style= "text-align:center; text-decoration:underline;"> Zheng Xin Yuan （正心园）</h2>
+	<img id = "place-pic" src="/pictures/zxy1.jpg" />
+	<p id = "describe-place"> Zheng Xin Yuan is a place frequented by students who have exams the next day. The scenic background also makes it a common place for photo-taking among Dunmanians </p>
 	<h3 id="comment-title"> Stories people have shared </h3>
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

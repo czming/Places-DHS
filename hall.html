@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset= "UTF-8">
 	<link rel= "stylesheet" type= "text/css" href= "/css/styles.css">
 	<title>Places@DHS </title>
@@ -19,18 +20,9 @@
 		<li class= "navigation"><a href= "submit"> Submit </a></li>
 		<li id= "login-button"> <a href= {{url}}> {{signinstatus}} </a> </li>
 	</ul>
-	<h2 style= "text-align:center; text-decoration:underline;"> School Hall </h2>
-	<table class= "place-description">
-		<tr>
-			<td>
-				<img src= "/pictures/hall.jpg" width= "400" height= "300" />			
-			</td>
-			<td> 
-				<p>The hall is a where our school holds many events such as talks, concerts, etc. Other than for formal events, our school also uses the hall for other activities such as PE lessons, CCA trainings and indoor games. Most students would remember the hall as a place where they first got their school badges pinned on them during their Year 1 Orientation</p>
-			</td>
-		</tr>
-	</table>
-	<br><br>
+	<h2 style= "text-align:center; text-decoration:underline;"> School Hall</h2>
+	<img id = "place-pic" src="/pictures/hall.jpg" />
+	<p id = "describe-place">The hall is a where our school holds many events such as talks, concerts, etc. Other than for formal events, our school also uses the hall for other activities such as PE lessons, CCA trainings and indoor games. Most students would remember the hall as a place where they first got their school badges pinned on them during their Year 1 Orientation</p>
 	<h3 id="comment-title"> Stories people have shared </h3>
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
